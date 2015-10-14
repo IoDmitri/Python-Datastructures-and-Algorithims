@@ -27,21 +27,3 @@ class KruskalMST:
 
 	def edges(self):
 		return self._mst
-
-j = EdgeWeightedGraph(6)
-e1 = Edge(5,1,10)
-j.addEdge(e1)
-e2 = Edge(1,2,4)
-j.addEdge(e2)
-e3 = Edge(1,3,3)
-j.addEdge(e3)
-e4 = Edge(3,4,4)
-j.addEdge(e4)
-e5 = Edge(2,0,5)
-j.addEdge(e5)
-e6 = Edge(0,4,4)
-j.addEdge(e6)
-
-w = KruskalMST(j)
-for x in w.edges():
-	print(x)
