@@ -30,7 +30,7 @@ class IndexMinPQ:
 		return self.n == 0
 
 	def contains(self,i):
-		self.__indexBoundsCheck
+		self.__indexBoundsCheck(i) 
 		return not self.qp[i] == -1 
 
 	def size(self):
@@ -101,7 +101,8 @@ class IndexMinPQ:
 		if self.keys[i] > key:
 			raise ValueError('Calling increaseKey with given argument will not strictly increase the key')
 
-		self.keys[i] = keyssink(self.qp[i])
+		self.keys[i] = key
+		sink(self.qp[i])
 
 	def delete(self,i):
 		self.__indexBoundsCheck(i)
@@ -143,13 +144,7 @@ class IndexMinPQ:
 			k = j 
 
 
-j = IndexMinPQ(5)
-j.insert(3,'b')
-j.insert(4,'d')
-j.insert(5,'a')
-print(j)
-j.change(5,'f')
-print(j)
+
 		
 
 
